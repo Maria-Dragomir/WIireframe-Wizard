@@ -17,7 +17,7 @@ document.getElementById('file-input').addEventListener('change', function() {
 
 document.getElementById('btn').addEventListener('click', async function() {
     var API_KEY = document.getElementById('api-key-input').value;
-    var url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=' + API_KEY;
+    var apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=' + API_KEY;
 
     var body = {
         contents: [{
@@ -29,7 +29,7 @@ document.getElementById('btn').addEventListener('click', async function() {
         }]
     };
 
-    var response = await fetch(url, {
+    var response = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body)
