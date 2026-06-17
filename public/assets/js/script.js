@@ -1,4 +1,8 @@
-var API_KEY "INSERT_GEMINI_KEY_HERE"
+var response = await fetch('/apigenerate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ imageBase64, imageMime })
+});
 
 var iamgeBase64 ='';
 var iamgeMime ='';
