@@ -45,7 +45,7 @@ document.getElementById('btn').addEventListener('click', async function() {
                     - No shadows, gradients, border-radius above 4px, or animations
                     - Add one media query: stack all grid columns to a single column below 600px
                     7. Inside every card use proper child elements — <h3> for the title, <p> for body text, <ul> for lists, <button> for actions. No <br> tags.
-                    8. Image and media placeholders: a <div class="placeholder"> with background:#e0e0e0, a fixed height matching the wireframe proportion, and centered text describing what goes there. No <img> tags.
+                    8. Image and media placeholders: a <div class="placeholder"> with background:#e0e0e0, a fixed height matching the wireframe proportion, and centered text describing what goes there. No <img> tags. The placeholder class is for image and media slots only — card text content (headings, paragraphs, lists, buttons) sits outside and below any placeholder div, never inside it.
                     9. Only include a <script> tag if the wireframe clearly shows a countdown timer. If it does, output this exact skeleton before </body>:
                     const timerEl = document.getElementById('countdown');
                     // TODO: set your launch date here
@@ -59,6 +59,16 @@ document.getElementById('btn').addEventListener('click', async function() {
                         timerEl.textContent = d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
                     }, 1000);
                     10. Preserve the exact placeholder labels from the wireframe: [SOFTWARE NAME], [FEATURE 1 TITLE] etc. Do not invent real content.
+                    11. If the wireframe shows a search bar, output a proper HTML form:
+                        <form role="search">
+                        <input type="search" placeholder="Search...">
+                        <button type="submit">Search</button>
+                        </form>
+                    12. If the wireframe shows content cards with no visible text labels, output them as bare placeholder divs only — no invented headings or body text:
+                        <article class="card">
+                        <div class="placeholder">Image placeholder</div>
+                        </article>
+                    13. For any unreadable, ambiguous, or illegible text in the wireframe, use standard Lorem ipsum placeholder text rather than attempting to guess the content.
 
                     Return the complete HTML file inside a \`\`\`html code block. Nothing else.`
                 }
