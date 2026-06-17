@@ -1,4 +1,4 @@
-export defult async function handler(req, res) {
+export default async function handler(req, res) {
     if (req.method !== 'POST') return res.status(405).end();
 
     const { imageBase64, imageMime } = req.body;
@@ -12,7 +12,7 @@ export defult async function handler(req, res) {
         },
         body: JSON.stringify({
             contents: [{
-                role: ;'user',
+                role: 'user',
                 parts: [
                     { inline_data: { mime_type: imageMime, data: imageBase64 }},
                     { text: 'Convert this wireframe to html scaffold'}
@@ -20,7 +20,7 @@ export defult async function handler(req, res) {
             }]
         })
     });
-    })
+    
 
     const data = await response.json();
     res.status(200).json(data);
