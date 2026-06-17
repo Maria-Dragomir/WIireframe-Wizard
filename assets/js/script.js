@@ -24,27 +24,44 @@ document.getElementById('btn').addEventListener('click', async function() {
             role: 'user',
             parts: [
                 { inline_data: { mime_type: imageMime, data: imageBase64 } },
-                { text: 
-                    `Look at the entire wireframe carefully before writing any code. Count every card, every section, every nav item.
-                    If you see 7 feature cards, output 7 cards. If you see 3 pricing tiers, output 3. Do not summarise or reduce.
-                    You are a front-end developer. Convert this wireframe image into a complete, self-contained HTML file with embedded CSS.
+                { text:
+                    `Look at the entire wireframe carefully before writing any code.
+                    Count every card, every section, every nav item before you start.
+
+                    You are a front-end developer converting a wireframe into an HTML scaffold.
+                    A developer will use this as a starting point — structure and accuracy matter more than style.
 
                     RULES:
-                    1. ONE file only. All CSS goes inside a <style> tag in the <head>. No external stylesheets.
-                    2. Count every element in the wireframe carefully. If you see 7 feature cards, output 7 cards. If you see 3 pricing tiers, output 3. Do not summarise or reduce.
-                    3. Every section visible in the wireframe must exist in the HTML with the correct tag: <header>, <nav>, <main>, <section>, <footer> etc.
-                    4. Add an HTML comment above each section naming it and listing what a developer needs to fill in. Example: <!-- HERO: replace h1 with product name, swap placeholder div for video embed -->
-                    5. Styling rules:
-                    - Layout only: use CSS Grid or Flexbox to match the wireframe structure
+                    1. ONE self-contained file. All CSS inside a <style> tag in <head>. No external stylesheets.
+                    2. Count every repeated element precisely. Output exactly what the wireframe shows — do not summarise or reduce.
+                    3. Use correct semantic tags throughout: <header>, <nav>, <main>, <section>, <footer>, <article>, <ul>, <form>. Nav items must use <a href="#"> tags, not <span> or plain text.
+                    4. Wrap all sections between the header and footer in a single <main> tag.
+                    5. Add a comment above every section in this format:
+                    <!-- SECTION NAME: what the developer needs to replace or implement -->
+                    6. CSS rules:
+                    - Layout only — CSS Grid and Flexbox to match wireframe structure
                     - Neutral colours: #f4f4f4 backgrounds, #e0e0e0 borders, #333 text, #fff cards
-                    - system-ui font only
-                    - No shadows, gradients, or animations
-                    6. Image placeholders: a <div> with background:#e0e0e0, a set height, and centered text saying what goes there. No <img> tags.
-                    7. Interactive elements: if the wireframe shows a form, countdown, or tabs — include the HTML structure and minimal working JS for it.
-                    8. Copy: use the exact placeholder labels from the wireframe (e.g. [SOFTWARE NAME], [FEATURE 1 TITLE]). Do not invent content.
+                    - system-ui font, no external fonts
+                    - No shadows, gradients, border-radius above 4px, or animations
+                    - Add one media query: stack all grid columns to a single column below 600px
+                    7. Inside every card use proper child elements — <h3> for the title, <p> for body text, <ul> for lists, <button> for actions. No <br> tags.
+                    8. Image and media placeholders: a <div class="placeholder"> with background:#e0e0e0, a fixed height matching the wireframe proportion, and centered text describing what goes there. No <img> tags.
+                    9. Only include a <script> tag if the wireframe clearly shows a countdown timer. If it does, output this exact skeleton before </body>:
+                    const timerEl = document.getElementById('countdown');
+                    // TODO: set your launch date here
+                    const launchDate = new Date('2025-01-01T00:00:00');
+                    setInterval(function() {
+                        const diff = launchDate - new Date();
+                        const d = Math.floor(diff / 86400000);
+                        const h = Math.floor((diff % 86400000) / 3600000);
+                        const m = Math.floor((diff % 3600000) / 60000);
+                        const s = Math.floor((diff % 60000) / 1000);
+                        timerEl.textContent = d + 'd ' + h + 'h ' + m + 'm ' + s + 's';
+                    }, 1000);
+                    10. Preserve the exact placeholder labels from the wireframe: [SOFTWARE NAME], [FEATURE 1 TITLE] etc. Do not invent real content.
 
                     Return the complete HTML file inside a \`\`\`html code block. Nothing else.`
-                 }
+                }
             ]
         }]
     };
