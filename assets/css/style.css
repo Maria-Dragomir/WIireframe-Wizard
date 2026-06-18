@@ -1,0 +1,365 @@
+ /* Global */
+
+:root {
+    --primary-bg: #020013;
+    --gradient-bg:radial-gradient(50% 50% at 50% 50%, rgb(64 28 124) 8%, rgb(56 17 117 / 98%) 26.5%, #0d031f 93.5%);
+    --secondary-bg: #fffffff;
+    /* --card-bg: #0B081B; */
+    --card-bg: #1d0a3c;
+    --text-color: #ffffff;
+    --secondary-text-color: #B1A5D3;
+    --accent-color1: #985CFC; 
+    --accent-color2: #3b1779;
+    --accent-gradient: linear-gradient(20deg, #3b1779 0%, #985CFC 100%);
+
+}
+
+.light-theme {
+    --primary-bg: var(--secondary-bg);
+    --secondary-bg: #f0f0f0;
+    --text-color: #000000;
+}
+
+body {
+    background: var(--gradient-bg);
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: var(--primary-bg);
+    }
+}
+
+/* Fonts */
+
+* {
+    font-family: "Host Grotesk", sans-serif;
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: var(--text-color);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--text-color);
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--accent-color1);
+}
+
+.small-text {
+    font-size: .9rem;
+    line-height: 1rem;
+    color: var(--secondary-text-color);
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 2.1rem;
+    }
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    p  {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+}
+/* 
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(./assets/icons/MaterialiconsOutlined-Regular.otf) format('otf'),
+    url(/assets/icons/Materialicons-Regular.ttf) format('truetype');
+} */
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px !important; 
+    display: inline-block;
+    line-height: 0;
+    vertical-align: middle;
+    margin-left: 5px;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Images / icons */
+
+.logo {
+    fill: var(--text-color);
+}
+
+.upload-icon {
+    fill: var(--text-color);
+    width: 88px;
+    height: 88px;
+}
+
+/* Containers */
+
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+        .container {
+        margin: 0 auto;
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+        .card-container {
+        flex-direction: column;
+    }
+}
+
+.card {
+    /* display: flex;        
+    justify-content: center;  
+    align-items: center;   */
+    background: var(--card-bg);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--accent-color1);
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    gap: 15px;
+}
+
+.icard {
+    /* display: flex;        
+    justify-content: center;  
+    align-items: center;  
+    flex-direction: row; */
+    background: transparent;
+    padding: 20px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.icard h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--accent-color1);
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .icard h4 {
+    text-align: center;
+    }
+}
+
+.icard-body {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: left; 
+    gap: 15px;
+}
+@media (max-width: 768px) {
+        .icard-body {
+        flex-direction: column;
+        padding-top: 0;
+    }
+}
+
+.icard-icon {
+    width: 100px;
+    height: auto;
+    fill: var(--accent-color1);
+    mask-type:alpha;
+}
+
+@media (max-width: 768px) {
+        .icard-icon {
+        width: 70px;
+        height: auto;
+    }
+}
+
+/* Alignment */
+
+.d-flex {
+    display: flex;
+    
+}
+
+.justify-content-center {
+    justify-content: center;
+    align-items: center;
+}
+.t-center  {
+    text-align: center;
+}
+
+.m-t-2 {
+    margin-top: 2rem;
+}
+
+.m-t-1 {
+    margin-top: 1rem;
+}
+
+/* colours */
+
+.accent-gradient-font {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}   
+
+.accent-gradient-bg {
+    background: var(--accent-gradient);
+}
+
+.secondary-color {
+    color: var(--secondary-text-color);
+}
+
+p.subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+/* Buttons */
+
+.upload-btn {
+    background: var(--accent-gradient);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/*  Hide the default input file element */
+#file-input {
+    display: none;
+}
+
+.custom-file-button, .generate-btn {
+    display: inline-block;
+    background: var(--accent-gradient);
+    color: var(--text-color);
+    border: 1px solid transparent;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: ease-in-out background-color 0.2s;
+}
+
+.custom-file-button:hover, .generate-btn:hover {
+    background: var(--accent-color2);
+    border: 1px solid var(--accent-color1);
+}
+
+/* Style the file name text */
+#file-name-display {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color:  var(--secondary-text-color);
+}
+
+input[type="password"] {
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid var(--secondary-text-color);
+    width: auto;
+    color:#ffffff;
+    background: var(--card-bg);
+
+    /* Hide the default file input */
+}
+    input[type="password"]:focus {
+        outline: none;
+        color:black;
+        border-color: var(--accent-color1);
+        background-color: white;
+    }
+
+/* footer */
+
+footer {
+    position: relative;
+    width: 100%;
+    justify-content: center;
+    vertical-align: middle;
+    bottom: 0;
+    padding: 10px;
+}
+
+.footer-text {
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    text-align: center;
+}
