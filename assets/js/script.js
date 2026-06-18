@@ -1,3 +1,20 @@
+// var imageBase64 = '';
+// var imageMime = '';
+
+// document.getElementById('file-input').addEventListener('change', function() {
+//     var file = this.files[0];
+//     if (!file) return;
+
+//     imageMime = file.type;
+
+//     var reader = new FileReader();
+//     reader.readAsDataURL(file);
+//     reader.onload = function(e) {
+//         imageBase64 = e.target.result.split(',')[1];
+//         document.getElementById('btn').disabled = false;
+//     }
+// });
+
 var imageBase64 = '';
 var imageMime = '';
 
@@ -11,9 +28,17 @@ document.getElementById('file-input').addEventListener('change', function() {
     reader.readAsDataURL(file);
     reader.onload = function(e) {
         imageBase64 = e.target.result.split(',')[1];
-        document.getElementById('btn').disabled = false;
+        
+        // To show and hide the download button
+
+        var btn = document.getElementById('btn');
+        
+        btn.disabled = false;
+        
+        btn.style.display = '';
     }
 });
+
 
 document.getElementById('btn').addEventListener('click', async function() {
     var API_KEY = document.getElementById('api-key-input').value;
