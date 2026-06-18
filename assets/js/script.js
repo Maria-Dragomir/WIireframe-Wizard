@@ -34,8 +34,9 @@ document.getElementById('file-input').addEventListener('change', function() {
         var btn = document.getElementById('btn');
         
         btn.disabled = false;
-        
         btn.style.display = '';
+
+        document.getElementById('upload-label').style.display = 'none';
     }
 });
 
