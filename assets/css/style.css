@@ -1,0 +1,209 @@
+ /* Global */
+
+:root {
+    --primary-bg: #020013;
+    --secondary-bg: #fffffff;
+    --card-bg: #0B081B;
+    --text-color: #ffffff;
+    --secondary-text-color: #B1A5D3;
+    --accent-color1: #985CFC;
+    --accent-color2: #3b1779;
+    --accent-gradient: linear-gradient(20deg, #3b1779 0%, #985CFC 100%);
+
+}
+
+.light-theme {
+    --primary-bg: var(--secondary-bg);
+    --secondary-bg: #f0f0f0;
+    --text-color: #000000;
+}
+
+body {
+    background: var(--primary-bg);
+    margin: 0;
+    padding: 0;
+}
+
+/* Fonts */
+
+
+/* @font-face {
+    font-family: "Host Grotesk", sans-serif;
+    font-style: normal;
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+    src: url('./assets/fonts/Host_Grotesk/HostGrotesk-VariableFont_wght.ttf') format('ttf');
+    font-display: swap;
+} */
+
+* {
+    font-family: "Host Grotesk", sans-serif;
+    box-sizing: border-box; /* Includes padding/borders in total width calculations */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 3.3rem;
+    color: var(--text-color);
+}
+
+h3 {
+    font-family: "Host Grotesk", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--text-color);
+}
+
+.small-text {
+    font-size: .9rem;
+    line-height: 1rem;
+    color: var(--secondary-text-color);
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        line-height: 2.1rem;
+    }
+}
+
+p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    p  {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(./assets/icons/MaterialiconsOutlined-Regular.otf) format('otf'),
+    url(./assets/icons/Materialicons-Regular.woff2) format('woff2'),
+    url(./assets/icons/Materialicons-Regular.woff) format('woff'),
+    url(./assets/icons/Materialicons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}
+
+/* Images / icons */
+
+.logo {
+    fill: var(--text-color);
+}
+
+.upload-icon {
+    fill: var(--text-color);
+    width: 88px;
+    height: 88px;
+}
+
+/* Containers */
+
+.container {
+    margin: 0 auto;
+    width: 70%;
+    padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+        .container {
+        margin: 0 auto;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.card {
+    /* display: flex;        
+    justify-content: center;  
+    align-items: center;   */
+    background: var(--card-bg);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--accent-color1);
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    gap: 15px;
+}
+
+/* Alignment */
+
+.d-flex {
+    display: flex;
+    
+}
+
+.justify-content-center {
+    justify-content: center;
+    align-items: center;
+}
+.t-center  {
+    text-align: center;
+}
+
+/* colours */
+
+.accent-gradient-font {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+}   
+
+.accent-gradient-bg {
+    background: var(--accent-gradient);
+}
+
+.secondary-color {
+    color: var(--secondary-text-color);
+}
+
+p.subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
