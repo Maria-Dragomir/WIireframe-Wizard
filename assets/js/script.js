@@ -114,10 +114,17 @@ document.getElementById('btn').addEventListener('click', async function() {
     var match = reply.match(/```html([\s\S]*?)```/i);
     var html = match ? match[1].trim() : reply;
 
-    var blob = new Blob([html], { type: 'text/html' });
+    var blob = new Blob([html], {type: 'text/html'});
     var url = URL.createObjectURL(blob);
-    var link = document.createElement('a');
+    var link = document. createElement('a');
     link.href = url;
     link.download = 'scaffold.html';
     link.click();
+    
+    //Prview section
+    var previewSection = document.getElementById('preview-section');
+    var previewFrame = document.getElementById('preview-frame');
+    previewFrame.srcdoc = html;
+    previewSection.style.display = '';
+    previewSection.scrollIntoView({behavior: 'smooth'});
 });
