@@ -2,8 +2,10 @@
 
 :root {
     --primary-bg: #020013;
+    --gradient-bg:radial-gradient(50% 50% at 50% 50%, rgb(64 28 124) 8%, rgb(56 17 117 / 98%) 26.5%, #0d031f 93.5%);
     --secondary-bg: #fffffff;
-    --card-bg: #0B081B;
+    /* --card-bg: #0B081B; */
+    --card-bg: #1d0a3c;
     --text-color: #ffffff;
     --secondary-text-color: #B1A5D3;
     --accent-color1: #985CFC; 
@@ -19,26 +21,22 @@
 }
 
 body {
-    background: var(--primary-bg);
+    background: var(--gradient-bg);
     margin: 0;
     padding: 0;
 }
 
+@media (max-width: 768px) {
+    body {
+        background: var(--primary-bg);
+    }
+}
+
 /* Fonts */
-
-
-/* @font-face {
-    font-family: "Host Grotesk", sans-serif;
-    font-style: normal;
-    font-weight: 100 1000;
-    font-stretch: 25% 151%;
-    src: url('./assets/fonts/Host_Grotesk/HostGrotesk-VariableFont_wght.ttf') format('ttf');
-    font-display: swap;
-} */
 
 * {
     font-family: "Host Grotesk", sans-serif;
-    box-sizing: border-box; /* Includes padding/borders in total width calculations */
+    box-sizing: border-box; 
     margin: 0;
     padding: 0;
 }
@@ -163,7 +161,7 @@ p {
 
 @media (max-width: 768px) {
         .card-container {
-       flex-direction: column;
+        flex-direction: column;
     }
 }
 
@@ -211,8 +209,8 @@ p {
 }
 
 @media (max-width: 768px) {
-        .icard h4 {
-       text-align: center;
+    .icard h4 {
+    text-align: center;
     }
 }
 
@@ -227,8 +225,8 @@ p {
 }
 @media (max-width: 768px) {
         .icard-body {
-       flex-direction: column;
-       padding-top: 0;
+        flex-direction: column;
+        padding-top: 0;
     }
 }
 
@@ -337,23 +335,22 @@ input[type="password"] {
     border-radius: 30px;
     border: 1px solid var(--secondary-text-color);
     width: auto;
-     color:#ffffff;
+    color:#ffffff;
     background: var(--card-bg);
-   
+
     /* Hide the default file input */
 }
- input[type="password"]:focus {
+    input[type="password"]:focus {
         outline: none;
         color:black;
         border-color: var(--accent-color1);
         background-color: white;
     }
 
-
 /* footer */
 
 footer {
-    position: fixed;
+    position: relative;
     width: 100%;
     justify-content: center;
     vertical-align: middle;
