@@ -6,7 +6,7 @@
     --card-bg: #0B081B;
     --text-color: #ffffff;
     --secondary-text-color: #B1A5D3;
-    --accent-color1: #985CFC;
+    --accent-color1: #985CFC; 
     --accent-color2: #3b1779;
     --accent-gradient: linear-gradient(20deg, #3b1779 0%, #985CFC 100%);
 
@@ -44,7 +44,6 @@ body {
 }
 
 h1 {
-    font-family: "Host Grotesk", sans-serif;
     font-size: 2.8rem;
     font-weight: 500;
     line-height: 3rem;
@@ -52,11 +51,17 @@ h1 {
 }
 
 h3 {
-    font-family: "Host Grotesk", sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.5rem;
     color: var(--text-color);
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--accent-color1);
 }
 
 .small-text {
@@ -85,18 +90,16 @@ p {
         line-height: 1.2rem;
     }
 }
-
+/* 
 @font-face {
     font-family: 'Material Icons';
     font-style: normal;
     font-weight: 400;
     src: local('Material Icons'),
     local('MaterialIcons-Regular'),
-    url(assets/icons/MaterialiconsOutlined-Regular.otf) format('otf'),
-    url(assets/icons/Materialicons-Regular.woff2) format('woff2'),
-    url(assets/icons/Materialicons-Regular.woff) format('woff'),
-    url(assets/icons/Materialicons-Regular.ttf) format('truetype');
-}
+    url(./assets/icons/MaterialiconsOutlined-Regular.otf) format('otf'),
+    url(/assets/icons/Materialicons-Regular.ttf) format('truetype');
+} */
 
 .material-icons {
     font-family: 'Material Icons';
@@ -138,7 +141,7 @@ p {
 
 .container {
     margin: 0 auto;
-    width: 70%;
+    max-width: 800px;
     padding: 20px;
 }
 
@@ -147,7 +150,20 @@ p {
         .container {
         margin: 0 auto;
         width: 100%;
-        padding: 0;
+        padding: 20px;
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+        .card-container {
+       flex-direction: column;
     }
 }
 
@@ -164,13 +180,70 @@ p {
 }
 
 .card-body {
-    padding: 20px;
+    padding: 1rem;
     display: flex;
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
     text-align: center; 
     gap: 15px;
+}
+
+.icard {
+    /* display: flex;        
+    justify-content: center;  
+    align-items: center;  
+    flex-direction: row; */
+    background: transparent;
+    padding: 20px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+
+.icard h4 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    color: var(--accent-color1);
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+        .icard h4 {
+       text-align: center;
+    }
+}
+
+.icard-body {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: left; 
+    gap: 15px;
+}
+@media (max-width: 768px) {
+        .icard-body {
+       flex-direction: column;
+       padding-top: 0;
+    }
+}
+
+.icard-icon {
+    width: 100px;
+    height: auto;
+    fill: var(--accent-color1);
+    mask-type:alpha;
+}
+
+@media (max-width: 768px) {
+        .icard-icon {
+        width: 70px;
+        height: auto;
+    }
 }
 
 /* Alignment */
@@ -186,6 +259,14 @@ p {
 }
 .t-center  {
     text-align: center;
+}
+
+.m-t-2 {
+    margin-top: 2rem;
+}
+
+.m-t-1 {
+    margin-top: 1rem;
 }
 
 /* colours */
@@ -268,12 +349,20 @@ input[type="password"] {
         background-color: white;
     }
 
-     input[type="password"] > ::placeholder {
-        outline: none;
-        color:white;
-        border-color: var(--accent-color1);
-    }
 
-    input#api-key-input.title {
-        color: white;
-    }
+/* footer */
+
+footer {
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    vertical-align: middle;
+    bottom: 0;
+    padding: 10px;
+}
+
+.footer-text {
+    color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    text-align: center;
+}

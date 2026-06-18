@@ -27,47 +27,87 @@
                 </a>
             </header>
         </div>
-        <section class="container m-t-5">
+        <section class="container m-t-2">
             <article class="t-center">
             <h1>Turn your Wireframes into clean code. <span class="accent-gradient-font">Magic!</span></h1><br>
-            <p class="secondary-color subtitle">Upload a wireframe and get it back as clean, HTML and CSS in seconds. No spells required.</p>
+            <p class="secondary-color subtitle">Upload an image of a wireframe and get it back as clean, HTML and CSS in seconds. No spells required.</p>
             </article>
         </section>
-        <section class="container m-t-5">
-          
+        <section class="container m-t-1">
                 <div class="card">
                     <div class="card-body">
-                         <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none">
+                        <svg class="upload-icon" xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none">
                         <mask id="mask0_16_199" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"><rect width="88" height="88" fill="#D9D9D9"/></mask>
                         <g mask="url(#mask0_16_199)">
                         <path d="M23.8333 71.5C18.766 71.5 14.4436 69.7421 10.8662 66.2264C7.28872 62.7107 5.5 58.414 5.5 53.3363C5.5 48.781 6.96544 44.7746 9.89633 41.3169C12.8272 37.8593 16.4621 35.8108 20.801 35.1716C21.9762 29.6905 24.7323 25.2083 29.0693 21.725C33.4058 18.2417 38.3827 16.5 44 16.5C50.6391 16.5 56.2711 18.8124 60.896 23.4373C65.5209 28.0622 67.8333 33.6942 67.8333 40.3333V42.1667H68.9618C72.8258 42.4673 76.0482 44.0211 78.6289 46.8279C81.2096 49.6341 82.5 52.9693 82.5 56.8333C82.5 60.9229 81.0899 64.3897 78.2696 67.2338C75.4487 70.0779 71.9935 71.5 67.9039 71.5H47.8784C46.0261 71.5 44.4583 70.8583 43.175 69.575C41.8917 68.2917 41.25 66.7239 41.25 64.8716V44.7892L34.4667 51.4598L30.6029 47.6318L44 34.2338L57.3971 47.6318L53.5333 51.4598L46.75 44.7892V64.8716C46.75 65.1539 46.8676 65.4124 47.1029 65.6471C47.3376 65.8824 47.5961 66 47.8784 66H67.8333C70.4 66 72.5694 65.1139 74.3417 63.3417C76.1139 61.5694 77 59.4 77 56.8333C77 54.2667 76.1139 52.0972 74.3417 50.325C72.5694 48.5528 70.4 47.6667 67.8333 47.6667H62.3333V40.3333C62.3333 35.2611 60.5458 30.9375 56.9708 27.3625C53.3958 23.7875 49.0722 22 44 22C38.9278 22 34.6042 23.7875 31.0292 27.3625C27.4542 30.9375 25.6667 35.2611 25.6667 40.3333H23.7628C20.2886 40.3333 17.2929 41.5861 14.7758 44.0917C12.2586 46.5972 11 49.6222 11 53.1667C11 56.7111 12.2528 59.7361 14.7583 62.2417C17.2639 64.7472 20.2889 66 23.8333 66H33V71.5H23.8333Z" fill="#985CFC"/>
                         </g>
                         </svg>
-                        <h3 class="m-t-2">Upload your wireframe image</h3>
+                        <h3>Upload your wireframe image</h3>
                         <p class="secondary-color small-text">JPG, PNG, WEBP, PDF (Max 10MB)</p>
-                        <input class="password" title="Enter API key" type="password" id="api-key-input" placeholder="Paste your Gemini API key">
-                        <!-- <input class="file-input" title="Upload image" type="file" id="file-input" accept="image/*" placeholder="Choose image"> -->
-                        <!-- <button class="upload-btn file-input" title="Upload image" type="button" id="file-input" accept="image/*">Upload image</button>  -->
-                        
-                        <!-- The visible styled button -->
+                        <input class="password m-t-1" title="Enter API key" type="password" id="api-key-input" placeholder="Paste your Gemini API key">
+
                         <label for="file-input" class="custom-file-button">Choose image<span class="material-icons">upload</span></label>
 
-                        <!-- Your original input element (will be hidden via CSS) -->
                         <input class="file-input" title="Upload image" type="file" id="file-input" accept="image/*" placeholder="Choose image">
 
-                        <!-- Optional: Element to show the selected file name -->
                         <!-- <span id="file-name-display">No file chosen</span> -->
 
-
-                        <!-- <button class="generate-btn" type="submit" id="btn" disabled>Generate HTML</button> -->
-                         <button class="generate-btn" type="submit" id="btn" style="display: none;" disabled>Download HTML & CSS file<span class="material-icons">download</span></button>
+                        <button class="generate-btn" type="submit" id="btn" style="display: none;" disabled>Download HTML & CSS file<span class="material-icons">download</span></button>
 
                         
                     </div>
                 </div>
-          
         </section>
-         <!-- <article class="form m-t-3 d-flex">
+        <section class="container m-t-3">
+            <!-- <article class="t-center">
+                <h3>How it works</h3><br>
+            </article>     -->
+            <div class="card-container m-t-2">
+                <div class="icard m-r-1">
+                    <h4>Upload</h4>
+                    <div class="icard-body">
+                        <svg class="icard-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66" fill="none">
+                        <mask id="mask0_19_284" maskUnits="userSpaceOnUse" x="0" y="0">
+                        <rect width="66" height="66" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_19_284)">
+                        <path d="M17.875 53.625C14.0745 53.625 10.8327 52.3066 8.14963 49.6698C5.46654 47.033 4.125 43.8105 4.125 40.0022C4.125 36.5858 5.22408 33.5809 7.42225 30.9877C9.62042 28.3944 12.3466 26.8581 15.6008 26.3787C16.4821 22.2679 18.5492 18.9063 21.802 16.2938C25.0543 13.6813 28.787 12.375 33 12.375C37.9793 12.375 42.2033 14.1093 45.672 17.578C49.1407 21.0467 50.875 25.2707 50.875 30.25V31.625H51.7213C54.6194 31.8505 57.0362 33.0158 58.9717 35.1209C60.9072 37.2256 61.875 39.727 61.875 42.625C61.875 45.6922 60.8174 48.2923 58.7022 50.4254C56.5865 52.5585 53.9951 53.625 50.9279 53.625H35.9088C34.5196 53.625 33.3438 53.1438 32.3813 52.1813C31.4188 51.2188 30.9375 50.0429 30.9375 48.6537V33.5919L25.85 38.5949L22.9522 35.7239L33 25.6754L43.0478 35.7239L40.15 38.5949L35.0625 33.5919V48.6537C35.0625 48.8654 35.1507 49.0593 35.3272 49.2353C35.5032 49.4118 35.6971 49.5 35.9088 49.5H50.875C52.8 49.5 54.4271 48.8354 55.7563 47.5063C57.0854 46.1771 57.75 44.55 57.75 42.625C57.75 40.7 57.0854 39.0729 55.7563 37.7438C54.4271 36.4146 52.8 35.75 50.875 35.75H46.75V30.25C46.75 26.4458 45.4094 23.2031 42.7281 20.5219C40.0469 17.8406 36.8042 16.5 33 16.5C29.1958 16.5 25.9531 17.8406 23.2719 20.5219C20.5906 23.2031 19.25 26.4458 19.25 30.25H17.8221C15.2164 30.25 12.9697 31.1896 11.0818 33.0688C9.19394 34.9479 8.25 37.2167 8.25 39.875C8.25 42.5333 9.18958 44.8021 11.0688 46.6813C12.9479 48.5604 15.2167 49.5 17.875 49.5H24.75V53.625H17.875Z" fill="#985CFC"/>
+                        </g>
+                        </svg>
+                        <p class="secondary-color small-text">Upload an image of your wireframe.</p>
+                    </div>
+                </div>
+                <div class="icard m-r-1">
+                    <h4>Generate</h4>
+                    <div class="icard-body">
+                        <svg class="icard-icon"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66" fill="none">
+                        <mask id="mask0_19_304" maskUnits="userSpaceOnUse" x="0" y="0">
+                        <rect width="66" height="66" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_19_304)">
+                        <path d="M12.5228 56.375L9.625 53.4772L30.6096 32.45L18.5893 29.4882L31.1438 21.6934L30.0548 6.875L41.382 16.4368L55.0687 10.8625L49.5632 24.5912L59.125 35.8765L44.3066 34.8563L36.4691 47.4107L33.4813 35.3904L12.5228 56.375ZM14.1467 20.3603L9.625 15.8386L14.1467 11.3176L18.6684 15.8386L14.1467 20.3603ZM38.1562 36.9456L42.0908 30.5353L49.6217 31.0963L44.7563 25.3158L47.586 18.3453L40.6154 21.175L34.8349 16.3515L35.3959 23.8404L29.0125 27.8176L36.3103 29.6209L38.1562 36.9456ZM50.1614 56.375L45.6397 51.8533L50.1614 47.3316L54.6824 51.8533L50.1614 56.375Z" fill="#985CFC"/>
+                        </g>
+                        </svg>
+                        <p class="secondary-color small-text">Wireframe Wizard will generate clean HTML and CSS code.</p>
+                    </div>
+                </div>
+                <div class="icard">
+                    <h4>Download</h4>
+                    <div class="icard-body">
+                        <svg class="icard-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 66 66" fill="none">
+                        <mask id="mask0_19_317" maskUnits="userSpaceOnUse" x="0" y="0">
+                        <rect width="66" height="66" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_19_317)">
+                        <path d="M30.2074 58.9875C26.9005 58.6383 23.8299 57.7127 20.9956 56.2107C18.1608 54.7088 15.705 52.7936 13.6283 50.4653C11.5516 48.1365 9.92294 45.4701 8.74227 42.4662C7.56114 39.4623 6.97058 36.2927 6.97058 32.9574C6.97058 26.2236 9.18731 20.3835 13.6208 15.4372C18.0542 10.4908 23.606 7.65444 30.2761 6.92798V11.053C24.7482 11.8321 20.1694 14.2913 16.5399 18.4305C12.9099 22.5693 11.0949 27.4116 11.0949 32.9574C11.0949 38.5032 12.9053 43.3458 16.5261 47.485C20.147 51.6242 24.7074 54.0834 30.2074 54.8625V58.9875ZM32.9574 45.7979L20.1176 32.9155L23.0574 29.975L30.8956 37.8125V20.2022H35.0199V37.8125L42.8155 30.0177L45.7559 33L32.9574 45.7979ZM35.7074 58.9875V54.8625C37.6782 54.5875 39.5689 54.0738 41.3793 53.3212C43.1897 52.5681 44.8741 51.5871 46.4324 50.378L49.4684 53.3604C47.4375 54.9155 45.2639 56.1644 42.9475 57.1072C40.631 58.0505 38.2177 58.6772 35.7074 58.9875ZM46.5699 15.5905C44.9657 14.3988 43.2584 13.4134 41.448 12.6342C39.6376 11.8551 37.747 11.328 35.7761 11.053V6.92798C38.2864 7.22085 40.6954 7.84304 43.0031 8.79454C45.3109 9.7465 47.4659 11 49.4684 12.5552L46.5699 15.5905ZM53.3184 49.3729L50.4199 46.4324C51.6116 44.8741 52.5741 43.1897 53.3074 41.3793C54.0407 39.5689 54.5449 37.6782 54.8199 35.7074H59.0295C58.6981 38.2177 58.0592 40.6382 57.1127 42.9688C56.1662 45.2994 54.9015 47.4341 53.3184 49.3729ZM54.8199 30.2074C54.5449 28.2366 54.0407 26.346 53.3074 24.5355C52.5741 22.7251 51.6116 21.0407 50.4199 19.4824L53.3713 16.4897C54.9191 18.4638 56.1715 20.6161 57.1285 22.9467C58.0855 25.2774 58.7192 27.6976 59.0295 30.2074H54.8199Z" fill="#985CFC"/>
+                        </g>
+                        </svg>
+                        <p class="secondary-color small-text">Download the generated HTML and CSS files.</p>
+                    </div>
+                </div>
+            </div>
+
+                <!-- <article class="form m-t-3 d-flex">
                 <form action="action_page.php" aria-label="ticket-form">
                     <input title="Enter API key" type="password" id="api-key-input" placeholder="Paste your Gemini API key">
                     <input title="Choose file" type="file" id="file-input" accept="image/*">
@@ -81,6 +121,6 @@
 			<p class="footer-text">&copy; 2026 Wireframe Wizard 2026</p>
 		</section>
     </footer>
-     <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
     </body>
 </html>
