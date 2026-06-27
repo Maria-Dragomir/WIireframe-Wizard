@@ -1,23 +1,15 @@
  /* Global */
 
 :root {
-    /* --primary-bg: #020013; */
     --primary-bg: #0d031f;
     --gradient-bg:radial-gradient(50% 50% at 50% 50%, rgb(64 28 124) 8%, rgb(56 17 117 / 98%) 26.5%, #0d031f 93.5%);
     --secondary-bg: #fffffff;
-    /* --card-bg: #0B081B; */
     --card-bg: #1d0a3c;
     --text-color: #ffffff;
     --secondary-text-color: #B1A5D3;
     --accent-color1: #985CFC; 
     --accent-color2: #3b1779;
     --accent-gradient: linear-gradient(20deg, #3b1779 0%, #985CFC 100%);
-}
-
-.light-theme {
-    --primary-bg: var(--secondary-bg);
-    --secondary-bg: #f0f0f0;
-    --text-color: #000000;
 }
 
 body {
@@ -68,7 +60,6 @@ h4 {
     color: var(--secondary-text-color);
 }
 
-
 @media (max-width: 768px) {
     h1 {
         font-size: 2rem;
@@ -88,16 +79,6 @@ p {
         line-height: 1.2rem;
     }
 }
-/* 
-@font-face {
-    font-family: 'Material Icons';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Material Icons'),
-    local('MaterialIcons-Regular'),
-    url(./assets/icons/MaterialiconsOutlined-Regular.otf) format('otf'),
-    url(/assets/icons/Materialicons-Regular.ttf) format('truetype');
-} */
 
 .material-icons {
     font-family: 'Material Icons';
@@ -137,6 +118,17 @@ p {
 
 /* Containers */
 
+.container-fluid {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.container-auto {
+    margin: 0 auto;
+    width: auto;
+    padding: 20px;
+}
+
 .container {
     margin: 0 auto;
     max-width: 800px;
@@ -165,10 +157,16 @@ p {
     }
 }
 
+.preview-card {
+    background: white;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--accent-color1);
+    margin-bottom: 20px;
+}
+
 .card {
-    /* display: flex;        
-    justify-content: center;  
-    align-items: center;   */
     background: var(--card-bg);
     border-radius: 30px;
     padding: 20px;
@@ -188,10 +186,6 @@ p {
 }
 
 .icard {
-    /* display: flex;        
-    justify-content: center;  
-    align-items: center;  
-    flex-direction: row; */
     background: transparent;
     padding: 20px;
     border: none;
@@ -248,7 +242,6 @@ p {
 
 .d-flex {
     display: flex;
-    
 }
 
 .justify-content-center {
@@ -301,8 +294,23 @@ p.subtitle {
     transition: background-color 0.3s ease;
 }
 
+.upload-icon {
+    mask-type: alpha;
+}
+
 /*  Hide the default input file element */
+
 #file-input {
+    display: none;
+}
+
+#preview-frame {
+    width: 100%; 
+    height: 600px; 
+    border: none;
+}
+
+.generate-btn {
     display: none;
 }
 
