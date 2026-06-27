@@ -358,7 +358,7 @@ input[type="password"] {
 /* footer */
 
 footer {
-    position: fixed;
+    position: relative;
     width: 100%;
     justify-content: center;
     vertical-align: middle;
